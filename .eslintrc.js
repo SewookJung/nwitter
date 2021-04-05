@@ -31,5 +31,13 @@ module.exports = {
       },
     ],
     'no-unused-vars': ['warn', { args: 'all' }],
+    'react/prop-types': ['off'],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
   },
 };
