@@ -30,5 +30,6 @@ module.exports = {
         objects: 'always-multiline',
       },
     ],
+    'no-unused-vars': ['warn', { args: 'all' }],
   },
 };
