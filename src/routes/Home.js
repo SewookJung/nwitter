@@ -6,7 +6,7 @@ import Nweet from 'components/Nweet';
 const Home = ({ userObj }) => {
   const [nweet, setNweet] = useState('');
   const [nweets, setNweets] = useState([]);
-  const [attachment, setAttachemnt] = useState();
+  const [attachment, setAttachemnt] = useState('');
 
   useEffect(() => {
     dbService.collection('nweets').onSnapshot((snapshot) => {
