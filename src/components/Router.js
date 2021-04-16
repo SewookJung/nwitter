@@ -7,7 +7,7 @@ import Navigation from 'components/Navigation';
 
 const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => (
   <Router>
-    {isLoggedIn && <Navigation userObj={userObj} />}
+    {isLoggedIn && <Navigation />}
     <Switch>
       {isLoggedIn ? (
         <>
