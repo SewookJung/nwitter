@@ -33,6 +33,12 @@ module.exports = {
     'no-unused-vars': ['warn', { args: 'all' }],
     'react/prop-types': ['off'],
     'no-alert': 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        ImportDeclaration: 'never',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
