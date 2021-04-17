@@ -39,6 +39,8 @@ module.exports = {
         ImportDeclaration: 'never',
       },
     ],
+    'implicit-arrow-linebreak': [0, 'below'],
+    'no-confusing-arrow': [0, { allowParens: true }],
   },
   settings: {
     'import/resolver': {
