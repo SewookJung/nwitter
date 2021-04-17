@@ -3,13 +3,14 @@ import AppRouter from 'components/Router';
 import { authService } from 'fbase';
 import { FaTwitterSquare } from 'react-icons/fa';
 import Colors from 'components/styles/Colors';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Footer = styled.footer`
   text-align: center;
   padding: 20px 0px;
   border-top: ${Colors.Border};
   color: ${Colors.Twitter};
+  grid-column: 1/3;
 `;
 
 const FooterTitle = styled.span`
