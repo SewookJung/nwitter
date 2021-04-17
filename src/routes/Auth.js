@@ -1,6 +1,41 @@
 import AuthForm from 'components/AuthForm';
 import { authService, firebaseInstance } from 'fbase';
 import React from 'react';
+import { CgGoogle } from 'react-icons/cg';
+import { FaGithub } from 'react-icons/fa';
+
+import styled from 'styled-components';
+
+const Container = styled.div`
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const SocialContainer = styled.div`
+  display: flex;
+`;
+
+const Button = styled.button`
+  border: none;
+  padding: 20px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+
+  color: white;
+  background: ${(props) =>
+    props.name === 'google'
+      ? 'linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335)'
+      : '#333'};
+  > svg {
+    margin-right: 7px;
+    line-height: 0.1;
+  }
+`;
 
 const Auth = () => {
   const onSocialClick = async (event) => {
@@ -18,17 +53,19 @@ const Auth = () => {
   };
 
   return (
-    <div>
+    <Container>
       <AuthForm />
-      <div>
-        <button type="button" name="google" onClick={onSocialClick}>
+      <SocialContainer>
+        <Button type="button" name="google" onClick={onSocialClick}>
+          <CgGoogle />
           Continue with Google
-        </button>
-        <button type="button" name="github" onClick={onSocialClick}>
+        </Button>
+        <Button type="button" name="github" onClick={onSocialClick}>
+          <FaGithub />
           Continue with Github
-        </button>
-      </div>
-    </div>
+        </Button>
+      </SocialContainer>
+    </Container>
   );
 };
 
